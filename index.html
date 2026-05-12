@@ -1,75 +1,92 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Certificate Verification Portal</title>
 
 <style>
 
+*{
+    box-sizing:border-box;
+}
+
 body{
     margin:0;
-    padding:20px;
+    padding:10px;
     background:#d7d6f1;
-    font-family:Arial, sans-serif;
+    font-family:"Times New Roman", serif;
+    overflow-x:hidden;
 }
 
 .container{
+    width:100%;
     max-width:900px;
     margin:auto;
     background:#fff;
     border:2px solid #222;
-    border-radius:15px;
-    padding:25px;
+    border-radius:20px;
+    padding:20px;
 }
 
 .title{
     text-align:center;
     color:green;
-    font-size:35px;
+    font-size:40px;
     font-weight:bold;
+    margin-top:15px;
 }
 
 .subtitle{
     text-align:center;
-    font-size:28px;
-    margin-top:10px;
-    color:#111;
-}
-
-.student-details{
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
+    font-size:32px;
     margin-top:25px;
+    margin-bottom:40px;
 }
 
-.left,
-.right{
-    width:48%;
-    line-height:35px;
-    font-size:20px;
+.top-section{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:15px;
 }
 
-.photo{
-    width:80px;
-    height:100px;
+.left-side{
+    flex:1;
+    min-width:250px;
+    font-size:18px;
+    line-height:45px;
+}
+
+.center-side{
+    width:220px;
+    text-align:center;
+    font-size:18px;
+}
+
+.right-side{
+    width:110px;
+    text-align:center;
+}
+
+.right-side img{
+    width:100px;
+    height:120px;
     border:1px solid #999;
     object-fit:cover;
 }
 
 .heading{
-    text-align:center;
-    font-size:22px;
+    font-size:24px;
     font-weight:bold;
-    margin-top:10px;
+    margin-bottom:15px;
 }
 
 table{
     width:100%;
     border-collapse:collapse;
-    margin-top:20px;
+    margin-top:30px;
 }
 
 table th,
@@ -83,36 +100,34 @@ table th{
     background:#f3f3f3;
 }
 
-
-
 .bottom{
-    margin-top:20px;
+    margin-top:25px;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
 }
 
 .back-link{
+    font-size:20px;
     color:#4b0082;
-    font-size:22px;
+    text-decoration:none;
 }
 
 .print-btn{
-    padding:8px 20px;
+    padding:10px 20px;
     border:none;
-    background:#ddd;
-    cursor:pointer;
     border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.print-btn:hover{
+    background:#ccc;
 }
 
 @media(max-width:768px){
-
-.left,
-.right{
-    width:100%;
-    font-size:15px;
-    line-height:28px;
-}
 
 .title{
     font-size:24px;
@@ -122,19 +137,39 @@ table th{
     font-size:20px;
 }
 
+.left-side{
+    font-size:14px;
+    line-height:32px;
+}
+
+.center-side{
+    width:100%;
+    text-align:left;
+    font-size:15px;
+}
+
+.right-side{
+    width:100%;
+}
+
+.right-side img{
+    width:80px;
+    height:95px;
+}
+
+table{
+    display:block;
+    overflow-x:auto;
+}
+
 table th,
 table td{
-    font-size:12px;
+    font-size:13px;
     padding:8px;
 }
 
-.pass{
-    font-size:55px;
-    margin-top:-50px;
-}
-
 .back-link{
-    font-size:16px;
+    font-size:15px;
 }
 
 }
@@ -154,145 +189,50 @@ table td{
 Certificate & Result Portal
 </div>
 
-<div class="student-details">
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Student Details</title>
-
-<style>
-
-body{
-    margin:0;
-    padding:12px;
-    background:#d9d8f0;
-    font-family:"Times New Roman", serif;
-}
-
-
-
-.top-section{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-}
-
-.left-side{
-    width:60%;
-    font-size:15px;
-    line-height:42px;
-}
-
-.center-side{
-    width:35%;
-    text-align:center;
-}
-
-.center-side h2{
-    margin-top:10px;
-    margin-bottom:8px;
-    font-size:20px;
-}
-
-.center-side p{
-    margin:10px 0;
-    font-size:15px;
-}
-
-.right-side{
-    width:12%;
-    text-align:right;
-}
-
-.right-side img{
-    width:100px;
-    height:120px;
-    object-fit:cover;
-}
-
-@media(max-width:768px){
-
-.top-section{
-    flex-wrap:nowrap;
-}
-
-.left-side{
-    width:48%;
-    font-size:11px;
-    line-height:28px;
-}
-
-.center-side{
-    width:35%;
-}
-
-.center-side h2{
-    font-size:16px;
-}
-
-.center-side p{
-    font-size:10px;
-}
-
-.right-side{
-    width:15%;
-}
-
-.right-side img{
-    width:70px;
-    height:75px;
-}
-
-}
-
-</style>
-</head>
-
-<body>
-
-<div class="main-box">
-
 <div class="top-section">
 
 <div class="left-side">
-<h2>Student Details</h2>
-<div>Name: PAWAN KAMBOJ</div>
 
-<div>Father Name: SHER BAHADUR</div>
-
-<div>Address: S/O RAMESH KUMAR, JODHKAN, Sirsa</div>
-
-<div>Course: DIPLOMA IN ELECTRICAL ENGINEERING</div>
-
+<div class="heading">
+Student Details
 </div>
 
+<div><b>Name:</b> PAWAN </div>
+
+<div><b>Father Name:</b> SHER BAHADUR</div>
+
+<div><b>Address:</b> S/O RAMESH KUMAR, JODHKAN, Sirsa</div>
+
+<div><b>Course:</b> DIPLOMA IN ELECTRICAL ENGINEERING</div>
+
+</div>
 
 <div class="center-side">
 
 <p>
-Enrollment No.: 
-<a href="#">59013541124320</a>
+<b>Enrollment No.:</b><br>
+<a href="#">59013541124420</a>
 </p>
-<p>Admission Date: 15/07/2020</p>
 
-<p>Completion date: 14/07/2023</p>
+<p>
+<b>Admission Date:</b><br>
+15/07/2020
+</p>
+
+<p>
+<b>Completion Date:</b><br>
+14/07/2023
+</p>
 
 </div>
 
 <div class="right-side">
 
- <img src="https://github.com/harshkamboj0501-alt/nationaltechnicaleducation/blob/ecc9df3e3250aad81203e14fbaec19a9be99e086/pawan_image_-removebg-preview.png" class="photo">
+<img src="https://raw.githubusercontent.com/harshkamboj0501-alt/nationaltechnicaleducation/ecc9df3e3250aad81203e14fbaec19a9be99e086/pawan_image_-removebg-preview.png">
 
 </div>
 
 </div>
-
-</div>
-
-
 
 <table>
 
@@ -403,7 +343,7 @@ Enrollment No.:
 
 <tr>
 <td>15</td>
-<td>CATROL SYSTEMS</td>
+<td>CONTROL SYSTEMS</td>
 <td>100</td>
 <td>91</td>
 </tr>
@@ -417,7 +357,7 @@ Enrollment No.:
 <tr>
 <td><b>Result</b></td>
 <td><b>Pass</b></td>
-<td><b>Grades</b></td>
+<td><b>Grade</b></td>
 <td><b>A</b></td>
 </tr>
 
@@ -430,16 +370,12 @@ Back To Main Website
 </a>
 
 <button class="print-btn" onclick="window.print()">
-Print this page
- 
-</div>
+Print this Page
 </button>
 
 </div>
 
 </div>
 
-</a>
 </body>
 </html>
-
